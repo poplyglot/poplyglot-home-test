@@ -18,21 +18,21 @@ header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.82);backdro
 .brand img{width:48px;height:auto;filter:drop-shadow(0 2px 3px rgba(23,111,207,.25))}
 .nav a.go{font-weight:800;color:var(--blue);text-decoration:none;padding:8px 16px;border-radius:99px;background:#EAF3FD}
 .nav a.go:hover{background:#DCEBFC}
-.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#EAF5FF 0%,#F6FAFE 55%,#FFF 100%);padding:84px 0 92px;text-align:center}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#E6F3FF 0%,#EEF7FF 45%,#F6FAFE 100%);padding:40px 0 44px;text-align:center}
 .b{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95),rgba(255,255,255,0) 32%),rgba(74,183,242,.30);border:1.5px solid rgba(255,255,255,.85);box-shadow:0 8px 24px rgba(23,111,207,.10);animation:float 9s ease-in-out infinite}
-.b1{width:180px;height:180px;left:-50px;top:40px}.b2{width:90px;height:90px;left:9%;bottom:30px;animation-delay:-3s}
-.b3{width:220px;height:220px;right:-70px;top:-50px;animation-delay:-5s}.b4{width:60px;height:60px;right:13%;bottom:60px;animation-delay:-2s}
-.b5{width:34px;height:34px;left:24%;top:46px;animation-delay:-6s}
+.b1{width:140px;height:140px;left:-50px;top:20px}.b2{width:70px;height:70px;left:9%;bottom:14px;animation-delay:-3s}
+.b3{width:170px;height:170px;right:-60px;top:-50px;animation-delay:-5s}.b4{width:50px;height:50px;right:13%;bottom:24px;animation-delay:-2s}
+.b5{width:34px;height:34px;left:24%;top:24px;animation-delay:-6s}
 @keyframes float{50%{transform:translateY(-14px)}}
 @media(prefers-reduced-motion:reduce){.b{animation:none}}
 .hero .wrap{position:relative}
-.mark{width:150px;height:auto;margin-bottom:18px;filter:drop-shadow(0 6px 14px rgba(23,111,207,.25))}
-h1{font-size:clamp(34px,5.4vw,58px);line-height:1.08;margin:0 auto 18px;max-width:760px;letter-spacing:-1px;font-weight:900}
+.mark{width:120px;height:auto;margin-bottom:10px;filter:drop-shadow(0 6px 14px rgba(23,111,207,.25))}
+h1{font-size:clamp(34px,5.4vw,58px);line-height:1.08;margin:0 auto 12px;max-width:760px;letter-spacing:-1px;font-weight:900}
 h1 span{background:linear-gradient(90deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:19px;color:var(--muted);max-width:560px;margin:0 auto 30px}
+.lead{font-size:19px;color:var(--muted);max-width:560px;margin:0 auto}
 .cta{display:inline-block;background:linear-gradient(180deg,#2483EA,var(--blue));color:#fff;text-decoration:none;font-weight:800;font-size:17px;padding:14px 28px;border-radius:99px;box-shadow:0 10px 24px rgba(23,111,207,.30);transition:transform .15s,box-shadow .15s}
 .cta:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(23,111,207,.36)}
-section.s{padding:64px 0}
+section.s{padding:64px 0}#languages{padding-top:36px}
 .kick{color:var(--blue);font-weight:900;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;text-align:center;margin:0 0 6px}
 h2{font-size:clamp(26px,3.4vw,36px);text-align:center;margin:0 0 36px;letter-spacing:-.5px;font-weight:900}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -64,14 +64,13 @@ footer{text-align:center;color:#61738D;font-size:15px;padding:40px 20px 48px}
 footer img{width:40px;display:block;margin:0 auto 10px;opacity:.9}
 footer a{color:var(--blue);font-weight:700;text-decoration:none}footer a:hover{text-decoration:underline}
 @media(max-width:900px){.cards,.feat{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.cards,.feat{grid-template-columns:1fr}.hero{padding:56px 0 64px}.mark{width:118px}.lead{font-size:17px}.nav a.go{display:none}section.s{padding:48px 0}.b1{width:120px;height:120px}.b3{width:150px;height:150px}}
+@media(max-width:620px){.cards,.feat{grid-template-columns:1fr}.hero{padding:28px 0 32px}.mark{width:96px}.lead{font-size:17px}.nav a.go{display:none}section.s{padding:48px 0}#languages{padding-top:24px}.b1{width:90px;height:90px}.b3{width:110px;height:110px}}
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="./"><img src="logo.svg" alt="" width="48" height="28">Poplyglot</a><a class="go" href="#languages">Start learning</a></div></header>
 <section class="hero"><i class="b b1"></i><i class="b b2"></i><i class="b b3"></i><i class="b b4"></i><i class="b b5"></i>
 <div class="wrap"><img class="mark" src="logo.svg" alt="Poplyglot bubbles logo" width="150" height="88">
 <h1>Learn a language <span>one pop at a time</span></h1>
-<p class="lead">Short daily lessons, real grammar practice, and words you can hear. Free to try right in your browser.</p>
-<a class="cta" href="#languages">Pick a language</a></div></section>
+<p class="lead">Short daily lessons, real grammar practice, and words you can hear. Free to try right in your browser.</p></div></section>
 <section class="s" id="languages"><div class="wrap"><p class="kick">Languages</p><h2>Pick a language</h2>
 <div class="cards">
 <div class="card live"><div class="top"><svg class="flag" viewBox="0 0 9 6" role="img" aria-label="Flag of Russia"><rect width="9" height="6" fill="#fff"/><rect y="2" width="9" height="2" fill="#0039A6"/><rect y="4" width="9" height="2" fill="#D52B1E"/></svg><span class="tag on">Available now</span></div>
