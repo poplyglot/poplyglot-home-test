@@ -1,54 +1,95 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Poplyglot</title>
-<link rel="icon" href="fav-32.png"><link rel="apple-touch-icon" href="fav-180.png">
+<title>Poplyglot · Learn a language one pop at a time</title>
+<meta name="description" content="Short daily lessons, real grammar practice, and words you can hear.">
+<meta name="theme-color" content="#176FCF">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="icon" href="fav-32.png" sizes="32x32"><link rel="apple-touch-icon" href="fav-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#12213F;background:#F5F9FD}
-header{background:#fff;border-bottom:1px solid #DDEAF5;padding:14px 20px}
-.brand{font-size:24px;font-weight:800;color:#176FCF;max-width:960px;margin:auto}
-main{max-width:960px;margin:auto;padding:0 20px}
-.hero{display:flex;align-items:center;gap:24px;padding:40px 0 24px}
-.hero img{width:120px;height:auto}
-h1{font-size:34px;margin:0 0 8px}.hero p{color:#536981;font-size:18px;margin:0}
-h2{font-size:22px;margin:32px 0 14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.card{background:#fff;border:1px solid #DDEAF5;border-radius:16px;padding:20px}
-.card h3{margin:0 0 6px;font-size:20px}.card p{color:#536981;margin:0 0 14px}
-.tag{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;margin-bottom:10px}
-.on{background:#E3F4EA;color:#1C7A43}.soon{background:#EEF1F5;color:#61738D}
-.btn{display:inline-block;background:#176FCF;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:600;margin:4px 6px 0 0}
-.btn.alt{background:#fff;color:#0F5FB8;border:1px solid #176FCF}
-.card.dim{opacity:.75}
-ul.feat{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
-ul.feat li{background:#fff;border:1px solid #DDEAF5;border-radius:12px;padding:12px 14px}
-footer{text-align:center;color:#61738D;font-size:14px;padding:40px 20px}
-footer a{color:#0F5FB8}
-@media(max-width:560px){.hero{flex-direction:column;text-align:center;padding-top:28px}h1{font-size:28px}.hero img{width:96px}}
+:root{--blue:#176FCF;--deep:#0F4F9A;--sky:#4AB7F2;--ink:#12213F;--muted:#5A6E88;--line:#E1ECF7;--bg:#F6FAFE}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Nunito,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;overflow-x:hidden}
+.wrap{max-width:1080px;margin:auto;padding:0 22px}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900;font-size:25px;letter-spacing:-.5px}
+.brand img{width:48px;height:auto;filter:drop-shadow(0 2px 3px rgba(23,111,207,.25))}
+.nav a.go{font-weight:800;color:var(--blue);text-decoration:none;padding:8px 16px;border-radius:99px;background:#EAF3FD}
+.nav a.go:hover{background:#DCEBFC}
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#EAF5FF 0%,#F6FAFE 55%,#FFF 100%);padding:84px 0 92px;text-align:center}
+.b{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95),rgba(255,255,255,0) 32%),rgba(74,183,242,.30);border:1.5px solid rgba(255,255,255,.85);box-shadow:0 8px 24px rgba(23,111,207,.10);animation:float 9s ease-in-out infinite}
+.b1{width:180px;height:180px;left:-50px;top:40px}.b2{width:90px;height:90px;left:9%;bottom:30px;animation-delay:-3s}
+.b3{width:220px;height:220px;right:-70px;top:-50px;animation-delay:-5s}.b4{width:60px;height:60px;right:13%;bottom:60px;animation-delay:-2s}
+.b5{width:34px;height:34px;left:24%;top:46px;animation-delay:-6s}
+@keyframes float{50%{transform:translateY(-14px)}}
+@media(prefers-reduced-motion:reduce){.b{animation:none}}
+.hero .wrap{position:relative}
+.mark{width:150px;height:auto;margin-bottom:18px;filter:drop-shadow(0 6px 14px rgba(23,111,207,.25))}
+h1{font-size:clamp(34px,5.4vw,58px);line-height:1.08;margin:0 auto 18px;max-width:760px;letter-spacing:-1px;font-weight:900}
+h1 span{background:linear-gradient(90deg,var(--blue),var(--sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:19px;color:var(--muted);max-width:560px;margin:0 auto 30px}
+.cta{display:inline-block;background:linear-gradient(180deg,#2483EA,var(--blue));color:#fff;text-decoration:none;font-weight:800;font-size:17px;padding:14px 28px;border-radius:99px;box-shadow:0 10px 24px rgba(23,111,207,.30);transition:transform .15s,box-shadow .15s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(23,111,207,.36)}
+section.s{padding:64px 0}
+.kick{color:var(--blue);font-weight:900;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;text-align:center;margin:0 0 6px}
+h2{font-size:clamp(26px,3.4vw,36px);text-align:center;margin:0 0 36px;letter-spacing:-.5px;font-weight:900}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{position:relative;background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 4px 18px rgba(18,33,63,.06);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(18,33,63,.12)}
+.card.live{border:2px solid #BFDcFA;background:linear-gradient(180deg,#fff 0%,#F3F9FF 100%)}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.flag{width:54px;height:36px;border-radius:7px;overflow:hidden;box-shadow:0 0 0 1px rgba(18,33,63,.10),0 3px 8px rgba(18,33,63,.12);display:block}
+.tag{font-size:12.5px;font-weight:800;padding:5px 12px;border-radius:99px}
+.on{background:#E3F6EA;color:#1C7A43}.on:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#2BB062;margin-right:6px;vertical-align:1px}
+.soon{background:#EEF2F7;color:#61738D}
+.card h3{margin:0 0 4px;font-size:24px;font-weight:900}
+.card p{color:var(--muted);margin:0 0 18px}
+.note{align-self:flex-start;font-size:13.5px;font-weight:700;color:#8A5A00;background:#FFF5DB;display:inline-block;padding:3px 10px;border-radius:99px;margin:-8px 0 14px}
+.ttl{display:flex;align-items:center;justify-content:space-between;gap:12px}.doll{width:52px;height:auto;margin:-6px 0 4px;filter:drop-shadow(0 4px 6px rgba(18,33,63,.18))}
+.btns{margin-top:auto;display:flex;flex-wrap:wrap;gap:10px}
+.btn{flex:1 1 auto;text-align:center;background:var(--blue);color:#fff;text-decoration:none;padding:11px 14px;border-radius:14px;font-weight:800;transition:background .15s,transform .15s}
+.btn:hover{background:var(--deep);transform:translateY(-1px)}
+.btn.alt{background:#fff;color:var(--blue);border:2px solid #BFDCFA}.btn.alt:hover{background:#EAF3FD}
+.wait{margin-top:auto;font-weight:800;color:#8597AE;font-size:14px}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;list-style:none;padding:0;margin:0}
+.feat li{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 3px 14px rgba(18,33,63,.05);transition:transform .2s,box-shadow .2s}
+.feat li:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(18,33,63,.10)}
+.ic{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;margin-bottom:12px;background:radial-gradient(circle at 32% 28%,#fff 0,rgba(255,255,255,0) 38%),#D9EEFD;color:var(--blue)}
+.ic svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.feat b{display:block;font-size:18px;font-weight:900;margin-bottom:2px}.feat span{color:var(--muted);font-size:15px}
+.alt-bg{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+footer{text-align:center;color:#61738D;font-size:15px;padding:40px 20px 48px}
+footer img{width:40px;display:block;margin:0 auto 10px;opacity:.9}
+footer a{color:var(--blue);font-weight:700;text-decoration:none}footer a:hover{text-decoration:underline}
+@media(max-width:900px){.cards,.feat{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.cards,.feat{grid-template-columns:1fr}.hero{padding:56px 0 64px}.mark{width:118px}.lead{font-size:17px}.nav a.go{display:none}section.s{padding:48px 0}.b1{width:120px;height:120px}.b3{width:150px;height:150px}}
 </style></head><body>
-<header><div class="brand">Poplyglot</div></header>
-<main>
-<section class="hero"><img src="matryoshka.png" alt="Matryoshka doll">
-<div><h1>Learn a language one pop at a time</h1>
-<p>Short daily lessons, real grammar practice, and words you can hear. Free to try right in your browser.</p></div></section>
-<h2>Pick a language</h2>
+<header><div class="wrap nav"><a class="brand" href="./"><img src="logo.svg" alt="" width="48" height="28">Poplyglot</a><a class="go" href="#languages">Start learning</a></div></header>
+<section class="hero"><i class="b b1"></i><i class="b b2"></i><i class="b b3"></i><i class="b b4"></i><i class="b b5"></i>
+<div class="wrap"><img class="mark" src="logo.svg" alt="Poplyglot bubbles logo" width="150" height="88">
+<h1>Learn a language <span>one pop at a time</span></h1>
+<p class="lead">Short daily lessons, real grammar practice, and words you can hear. Free to try right in your browser.</p>
+<a class="cta" href="#languages">Pick a language</a></div></section>
+<section class="s" id="languages"><div class="wrap"><p class="kick">Languages</p><h2>Pick a language</h2>
 <div class="cards">
-<div class="card"><span class="tag on">Available now</span><h3>Russian</h3>
-<p>Russian 101 and Russian 102. Start with the alphabet and build up to real sentences.</p>
-<a class="btn" href="https://poplyglot.github.io/poplyglot-russian-test/">Phone version</a>
-<a class="btn alt" href="https://poplyglot.github.io/poplyglot-russian-desktop-test/">Computer version</a></div>
-<div class="card dim"><span class="tag soon">Coming soon</span><h3>Spanish</h3><p>On the way. Check back later.</p></div>
-<div class="card dim"><span class="tag soon">Coming soon</span><h3>German</h3><p>On the way. Check back later.</p></div>
-</div>
-<h2>What you'll practice</h2>
+<div class="card live"><div class="top"><svg class="flag" viewBox="0 0 9 6" role="img" aria-label="Flag of Russia"><rect width="9" height="6" fill="#fff"/><rect y="2" width="9" height="2" fill="#0039A6"/><rect y="4" width="9" height="2" fill="#D52B1E"/></svg><span class="tag on">Available now</span></div>
+<div class="ttl"><h3>Russian</h3><img class="doll" src="matryoshka.png" alt="Matryoshka doll" width="52" height="86"></div><p>Russian 101 and Russian 102. Start with the alphabet and build up to real sentences.</p>
+<div class="btns"><a class="btn" href="https://poplyglot.github.io/poplyglot-russian-test/">Phone version</a><a class="btn alt" href="https://poplyglot.github.io/poplyglot-russian-desktop-test/">Computer version</a></div></div>
+<div class="card"><div class="top"><svg class="flag" viewBox="0 0 750 500" role="img" aria-label="Flag of Spain"><rect width="750" height="500" fill="#AA151B"/><rect y="125" width="750" height="250" fill="#F1BF00"/></svg><span class="tag soon">Coming soon</span></div>
+<h3>Spanish</h3><span class="note">Spoken in 20+ countries</span><p>On the way. Check back later.</p><div class="wait">Stay tuned</div></div>
+<div class="card"><div class="top"><svg class="flag" viewBox="0 0 5 3" role="img" aria-label="Flag of Germany"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg><span class="tag soon">Coming soon</span></div>
+<h3>German</h3><p>On the way. Check back later.</p><div class="wait">Stay tuned</div></div>
+</div></div></section>
+<section class="s alt-bg"><div class="wrap"><p class="kick">Inside the app</p><h2>What you'll practice</h2>
 <ul class="feat">
-<li><b>Vocab</b><br>Shuffled word drills from every chapter.</li>
-<li><b>Verb conjugations</b><br>Fill in each form, with simple charts.</li>
-<li><b>Cases</b><br>Put words in the right form for the sentence.</li>
-<li><b>Tenses</b><br>Practice present and past (and more in 102).</li>
-<li><b>Listening</b><br>Hear words and phrases in 4 different voices.</li>
-<li><b>Printable worksheets</b><br>Print, write, and check with answer keys.</li>
-</ul>
-</main>
-<footer>&copy; 2026 Poplyglot &middot; Contact: <a href="mailto:hello@poplyglot.com">hello@poplyglot.com</a></footer>
+<li><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M9 7h6M9 11h4"/></svg></div><b>Vocabulary</b><span>Everyday words with pictures and sound.</span></li>
+<li><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7h10M4 12h16M4 17h7"/><circle cx="18" cy="7" r="2"/><circle cx="15" cy="17" r="2"/></svg></div><b>Verb conjugations</b><span>See how verbs change for I, you, we and more.</span></li>
+<li><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></div><b>Noun cases</b><span>Learn the endings step by step with clear charts.</span></li>
+<li><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><b>Tenses</b><span>Past, present and future in real sentences.</span></li>
+<li><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 10v4h4l5 4V6L7 10z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg></div><b>Listening in 4 voices</b><span>Hear each word from different speakers.</span></li>
+<li><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13l2 2 4-4"/></svg></div><b>Printable worksheets</b><span>Practice on paper, with answer keys included.</span></li>
+</ul></div></section>
+<footer><img src="logo.svg" alt="" width="40" height="23">© 2026 Poplyglot · Contact: <a href="mailto:hello@poplyglot.com">hello@poplyglot.com</a></footer>
 </body></html>
